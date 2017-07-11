@@ -12,7 +12,7 @@ public class Parameters {
 
 	    private String username;
 
-	    private String numberofparticipant;
+	    private String noofparticipant;
 	    
 	    private String starttime;
 
@@ -84,16 +84,15 @@ public class Parameters {
 			this.endtime = endtime;
 		}
 
-		public String getNumberofparticipant ()
-	    {
-	        return numberofparticipant;
-	    }
+		 public String getNoofparticipant ()
+                 {
+                   return noofparticipant;
+                  }
 
-	    public void setNumberofparticipant (String numberofparticipant)
-	    {
-	        this.numberofparticipant = numberofparticipant;
-	    }
-
+                     public void setNoofparticipant (String noofparticipant)
+               {
+                  this.noofparticipant = noofparticipant;
+                 }
 	    public String getPurpose ()
 	    {
 	        return purpose;
