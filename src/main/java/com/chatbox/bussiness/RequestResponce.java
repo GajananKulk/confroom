@@ -55,7 +55,8 @@ public Response getbal(String outputJSON) throws IOException{
         String phone=p.getPhone();
         String tea=p.getTea();
         String p_user=p.getPrimaryuser();
-        String result =checkCapacity(room, capn, date, stime, etime, bookby, purpos, projector, phone, cap, tea, p_user);
+	RoomBooking rb=new RoomBooking();
+        String result =rb.checkCapacity(room, capn, date, stime, etime, bookby, purpos, projector, phone, cap, tea, p_user);
 		Response_Mdl res=new Response_Mdl();
 		res.setSource("policyWS");
 		res.setSpeech(result);
