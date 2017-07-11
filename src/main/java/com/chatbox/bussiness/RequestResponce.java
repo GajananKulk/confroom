@@ -42,7 +42,7 @@ public Response getConf(String outputJSON) throws IOException{
 		System.out.println("rs :"+rs.toString());
 		Parameters params=rs.getParameters();
 		
-	      Parameters p=new Parameters();
+	      Parameters p=rs.getParameters();
         String room=p.getRoomname();
 	System.out.println("room :"+room);
         String cap=p.getNoofparticipant();
