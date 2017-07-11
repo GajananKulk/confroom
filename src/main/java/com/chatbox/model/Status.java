@@ -4,6 +4,8 @@ public class Status
 {
     private String errorType;
 
+    private String errorDetails;
+
     private String code;
 
     public String getErrorType ()
@@ -14,6 +16,16 @@ public class Status
     public void setErrorType (String errorType)
     {
         this.errorType = errorType;
+    }
+
+    public String getErrorDetails ()
+    {
+        return errorDetails;
+    }
+
+    public void setErrorDetails (String errorDetails)
+    {
+        this.errorDetails = errorDetails;
     }
 
     public String getCode ()
@@ -29,6 +41,6 @@ public class Status
     @Override
     public String toString()
     {
-        return "ClassPojo [errorType = "+errorType+", code = "+code+"]";
+        return "ClassPojo [errorType = "+errorType+", errorDetails = "+errorDetails+", code = "+code+"]";
     }
 }
