@@ -28,7 +28,7 @@ public class RequestResponce {
 	
 @POST 
 @Consumes(MediaType.APPLICATION_JSON)
-public Response getbal(String outputJSON) throws IOException{
+public Response getConf(String outputJSON) throws IOException{
 	System.out.println("Request recieved");
 	 API_AI_Responce response = new API_AI_Responce();
 		
