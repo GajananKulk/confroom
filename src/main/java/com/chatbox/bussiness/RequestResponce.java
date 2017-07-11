@@ -44,8 +44,9 @@ public Response getConf(String outputJSON) throws IOException{
 		
 	      Parameters p=new Parameters();
         String room=p.getRoomname();
+	System.out.println("room :"+room);
         String cap=p.getNoofparticipant();
-	int capn=Integer.valueOf((String)p.getNoofparticipant());
+	int capn=4;//Integer.valueOf((String)p.getNoofparticipant());
 	//int capn=Integer.parseInt(cap);
 	String date=p.getDate();
         String stime=p.getStarttime();
