@@ -42,9 +42,9 @@ public Response getbal(String outputJSON) throws IOException{
 		System.out.println("rs :"+rs.toString());
 		Parameters params=rs.getParameters();
 		
-	       Parameters p=new Parameters();
-        String room=p.getRoom();
-        String cap=p.getNumberofparticipant();
+	      Parameters p=new Parameters();
+        String room=p.getRoomname();
+        String cap=p.getNoofparticipant();
         int capn=Integer.valueOf((String)cap);
         String date=p.getDate();
         String stime=p.getStarttime();
