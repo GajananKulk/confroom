@@ -60,6 +60,7 @@ public Response getbal(String outputJSON) throws IOException{
 		Response_Mdl res=new Response_Mdl();
 		res.setSource("policyWS");
 		res.setSpeech(result);
+	        res.setDisplayText(result);
 		ObjectMapper om=new ObjectMapper();
 		String str2=om.writeValueAsString(res);
 	return Response.status(200).entity(str2).header("Content-Type", "application/json").build();
