@@ -19,25 +19,6 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class RoomBooking {
-	public static void main(String[] args) throws Exception {
-		
-		/*Jhelum
-		Pawana
-		//Sales Meeting Room
-		Daffodil
-		CabinB2F201
-		Rose
-		Rajdhani
-		London
-		New York
-		Seoul
-		AC2CONF02
-		Shanghai*/
-
-		String result=checkCapacity("Shanghai",2,"2017-10-08", "13:00:00","16:00:00", "Gajanan Kulkarni", "Interview", "yes", "YES", "7", "No", "Pradnya Pujari");
-		System.out.println("result="+result);
-		System.out.println();
-	}
 
 	public static String checkCapacity(String room,int cap,String date,String stime,String etime,String bookby,String purpos,String projector,String phone,String participents,String tea,String p_user)throws IOException
 	{
