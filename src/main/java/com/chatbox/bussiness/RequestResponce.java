@@ -45,10 +45,8 @@ public Response getbal(String outputJSON) throws IOException{
 	      Parameters p=new Parameters();
         String room=p.getRoomname();
         String cap=p.getNoofparticipant();
-	
-      // int capn=Integer.valueOf((String)cap);
-	//int capn=Integer.valueOf((String)cap);
-       int capn1=5;
+	// int capn=Integer.valueOf((String)cap);
+	int capn=Integer.valueOf((String)cap);
 	String date=p.getDate();
         String stime=p.getStarttime();
         String etime=p.getEndtime();
@@ -59,7 +57,7 @@ public Response getbal(String outputJSON) throws IOException{
         String tea=p.getTea();
         String p_user=p.getPrimaryuser();
 	RoomBooking rb=new RoomBooking();
-        String result =rb.checkCapacity(room, capn1, date, stime, etime, bookby, purpos, projector, phone, cap, tea, p_user);
+        String result =rb.checkCapacity(room, capn, date, stime, etime, bookby, purpos, projector, phone, cap, tea, p_user);
 		Response_Mdl res=new Response_Mdl();
 		res.setSource("policyWS");
 		res.setSpeech(result);
