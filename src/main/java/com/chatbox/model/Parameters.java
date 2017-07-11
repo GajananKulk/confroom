@@ -6,146 +6,151 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 public class Parameters {
     private String projector;
 
-	    private String primaryuser;
+    private String primaryuser;
 
-	    private String userID;
+    private String endtime;
 
-	    private String username;
+    private String username;
 
-	    private String noofparticipant;
-	    
-	    private String starttime;
+    private String phone;
 
-	    private String endtime;
+    private String starttime;
 
-	    private String purpose;
+    private String roomname;
 
-	    private String tea;
+    private String userid;
 
-	    private String date;
+    private String purpose;
 
-	    private String room;
-	    
-	    private String phone;
+    private String tea;
 
-	    public String getProjector ()
-	    {
-	        return projector;
-	    }
+    private String date;
 
-	    public void setProjector (String projector)
-	    {
-	        this.projector = projector;
-	    }
+    private String noofparticipant;
 
-	    public String getPrimaryuser ()
-	    {
-	        return primaryuser;
-	    }
+    public String getProjector ()
+    {
+        return projector;
+    }
 
-	    public void setPrimaryuser (String primaryuser)
-	    {
-	        this.primaryuser = primaryuser;
-	    }
+    public void setProjector (String projector)
+    {
+        this.projector = projector;
+    }
 
-	    public String getUserID ()
-	    {
-	        return userID;
-	    }
+    public String getPrimaryuser ()
+    {
+        return primaryuser;
+    }
 
-	    public void setUserID (String userID)
-	    {
-	        this.userID = userID;
-	    }
+    public void setPrimaryuser (String primaryuser)
+    {
+        this.primaryuser = primaryuser;
+    }
 
-	    public String getUsername ()
-	    {
-	        return username;
-	    }
+    public String getEndtime ()
+    {
+        return endtime;
+    }
 
-	    public void setUsername (String username)
-	    {
-	        this.username = username;
-	    }
+    public void setEndtime (String endtime)
+    {
+        this.endtime = endtime;
+    }
 
-	    public String getStarttime() {
-			return starttime;
-		}
+    public String getUsername ()
+    {
+        return username;
+    }
 
-		public void setStarttime(String starttime) {
-			this.starttime = starttime;
-		}
+    public void setUsername (String username)
+    {
+        this.username = username;
+    }
 
-		public String getEndtime() {
-			return endtime;
-		}
+    public String getPhone ()
+    {
+        return phone;
+    }
 
-		public void setEndtime(String endtime) {
-			this.endtime = endtime;
-		}
+    public void setPhone (String phone)
+    {
+        this.phone = phone;
+    }
 
-		 public String getNoofparticipant ()
-                 {
-                   return noofparticipant;
-                  }
+    public String getStarttime ()
+    {
+        return starttime;
+    }
 
-                     public void setNoofparticipant (String noofparticipant)
-               {
-                  this.noofparticipant = noofparticipant;
-                 }
-	    public String getPurpose ()
-	    {
-	        return purpose;
-	    }
+    public void setStarttime (String starttime)
+    {
+        this.starttime = starttime;
+    }
 
-	    public void setPurpose (String purpose)
-	    {
-	        this.purpose = purpose;
-	    }
+    public String getRoomname ()
+    {
+        return roomname;
+    }
 
-	    public String getTea ()
-	    {
-	        return tea;
-	    }
+    public void setRoomname (String roomname)
+    {
+        this.roomname = roomname;
+    }
 
-	    public void setTea (String tea)
-	    {
-	        this.tea = tea;
-	    }
+    public String getUserid ()
+    {
+        return userid;
+    }
 
-	    public String getDate ()
-	    {
-	        return date;
-	    }
+    public void setUserid (String userid)
+    {
+        this.userid = userid;
+    }
 
-	    public void setDate (String date)
-	    {
-	        this.date = date;
-	    }
+    public String getPurpose ()
+    {
+        return purpose;
+    }
 
-	    public String getRoom ()
-	    {
-	        return room;
-	    }
+    public void setPurpose (String purpose)
+    {
+        this.purpose = purpose;
+    }
 
-	    public void setRoom (String room)
-	    {
-	        this.room = room;
-	    }
+    public String getTea ()
+    {
+        return tea;
+    }
 
-		public String getPhone() {
-			return phone;
-		}
+    public void setTea (String tea)
+    {
+        this.tea = tea;
+    }
 
-		public void setPhone(String phone) {
-			this.phone = phone;
-		}
+    public String getDate ()
+    {
+        return date;
+    }
 
-		@Override
-		public String toString() {
-			return "Parameters [projector=" + projector + ", primaryuser=" + primaryuser + ", userID=" + userID
-					+ ", username=" + username + ", numberofparticipant=" + numberofparticipant + ", starttime="
-					+ starttime + ", endtime=" + endtime + ", purpose=" + purpose + ", tea=" + tea + ", date=" + date
-					+ ", room=" + room + "]";
-		}
+    public void setDate (String date)
+    {
+        this.date = date;
+    }
+
+    public String getNoofparticipant ()
+    {
+        return noofparticipant;
+    }
+
+    public void setNoofparticipant (String noofparticipant)
+    {
+        this.noofparticipant = noofparticipant;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "ClassPojo [projector = "+projector+", primaryuser = "+primaryuser+", endtime = "+endtime+", username = "+username+", phone = "+phone+", starttime = "+starttime+", roomname = "+roomname+", userid = "+userid+", purpose = "+purpose+", tea = "+tea+", date = "+date+", noofparticipant = "+noofparticipant+"]";
+    }
 }
