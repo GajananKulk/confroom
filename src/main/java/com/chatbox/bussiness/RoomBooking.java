@@ -30,7 +30,7 @@ public class RoomBooking {
 		FileInputStream fis=null;
 		//InputStream stream = RoomBooking.class.getResourceAsStream("ConferenceRoomBooking.xls");
 		try{
-			File excel = new File("ConferenceRoomBooking.xls");
+			File excel = new File("/ConferenceRoomBooking.xls");
 			fis = new FileInputStream(excel);
 			wb = new HSSFWorkbook(fis);
 		}catch(Exception e){
@@ -96,7 +96,7 @@ public class RoomBooking {
 		FileInputStream fis=null;
 		
 		try{
-			File excel = new File("ConferenceRoomBooking.xls");
+			File excel = new File("/ConferenceRoomBooking.xls");
 			fis = new FileInputStream(excel);
 			wb = new HSSFWorkbook(fis);
 			System.out.println("File Fetched");
@@ -161,7 +161,7 @@ public class RoomBooking {
 					row1.createCell(7).setCellValue(participents);
 					row1.createCell(8).setCellValue(tea);
 					row1.createCell(9).setCellValue(p_user);
-					File excel = new File("ConferenceRoomBooking.xls");
+					File excel = new File("/ConferenceRoomBooking.xls");
 					FileOutputStream fos = new FileOutputStream(excel);
 					wb.write(fos);
 					result=name+" Room is Booked Successfully 1";
