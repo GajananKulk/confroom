@@ -135,8 +135,10 @@ public class RoomBooking {
 			try{
 				String st[]=cellToString(row.getCell(roomHeaderIndex)).split(":");
 				String et[]=cellToString(row.getCell(capHeaderIndex)).split(":");
-				sti=Integer.valueOf((String)st[0]);	
-				eti=Integer.valueOf((String)et[0]);
+				//sti=Integer.valueOf((String)st[0]);
+				sti=Integer.parseInt(st[0]);
+				eti=Integer.parseInt(et[0]);
+				//eti=Integer.valueOf((String)et[0]);
 				String ust[]=stime.split(":");
 				String uet[]=etime.split(":");
 				usti=Integer.valueOf((String)ust[0]);	
