@@ -16,7 +16,7 @@ import com.chatbox.model.Parameters;
 import com.chatbox.model.Response_Mdl;
 import com.chatbox.model.Result;
 
-@Path("balance")
+@Path("book")
 public class RequestResponce {
 
 	@GET
@@ -42,15 +42,23 @@ public Response getbal(String outputJSON) throws IOException{
 		System.out.println("rs :"+rs.toString());
 		Parameters params=rs.getParameters();
 		
-		Validate_Data_Excel v=new Validate_Data_Excel();
-		int card_no=Integer.valueOf((String)params.getCardNo());
-		int otp=Integer.valueOf((String)params.getOtp());
-		String bal= v.getBalance(card_no,otp);
-		System.out.println("Current Balance:-"+bal);
+	       Parameters p=new Parameters();
+        String room=p.getRoom();
+        String cap=p.getNumberofparticipant();
+        int capn=Integer.valueOf((String)cap);
+        String date=p.getDate();
+        String stime=p.getStarttime();
+        String etime=p.getEndtime();
+        String bookby=p.getUsername();
+        String purpos=p.getPurpose();
+        String projector=p.getProjector();
+        String phone=p.getPhone();
+        String tea=p.getTea();
+        String p_user=p.getPrimaryuser();
+        String result =checkCapacity(room, capn, date, stime, etime, bookby, purpos, projector, phone, cap, tea, p_user);
 		Response_Mdl res=new Response_Mdl();
 		res.setSource("policyWS");
-		String str1=""+bal;
-		res.setSpeech(str1);
+		res.setSpeech(result);
 		ObjectMapper om=new ObjectMapper();
 		String str2=om.writeValueAsString(res);
 	return Response.status(200).entity(str2).header("Content-Type", "application/json").build();
