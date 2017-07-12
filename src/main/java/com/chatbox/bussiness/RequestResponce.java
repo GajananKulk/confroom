@@ -63,8 +63,12 @@ public Response getConf(String outputJSON) throws IOException{
 		res.setSource("policyWS");
 		res.setSpeech(result);
 	        res.setDisplayText(result);
+	Fulfillment f=rs.getFulfillment ();
+	Messages msg=f.getMessages();
+	msg.setSpeech (result);
 		ObjectMapper om=new ObjectMapper();
 		String str2=om.writeValueAsString(res);
+	
 	return Response.status(200).entity(str2).header("Content-Type", "application/json").build();
 }
 }
