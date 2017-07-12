@@ -28,7 +28,7 @@ public class RequestResponce {
 	
 @POST 
 @Consumes(MediaType.APPLICATION_JSON)
-public Response getbal(String outputJSON) throws IOException{
+public Response getConf(String outputJSON) throws IOException{
 	System.out.println("Request recieved");
 	 API_AI_Responce response = new API_AI_Responce();
 		
@@ -42,11 +42,12 @@ public Response getbal(String outputJSON) throws IOException{
 		System.out.println("rs :"+rs.toString());
 		Parameters params=rs.getParameters();
 		
-	      Parameters p=new Parameters();
+	      Parameters p=rs.getParameters();
         String room=p.getRoomname();
+	System.out.println("room :"+room);
         String cap=p.getNoofparticipant();
-	// int capn=Integer.valueOf((String)cap);
-	int capn=Integer.parseInt(cap);
+	int capn=Integer.valueOf((String)p.getNoofparticipant());
+	//int capn=Integer.parseInt(cap);
 	String date=p.getDate();
         String stime=p.getStarttime();
         String etime=p.getEndtime();

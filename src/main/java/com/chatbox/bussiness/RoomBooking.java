@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -30,9 +31,10 @@ public class RoomBooking {
 		FileInputStream fis=null;
 		//InputStream stream = RoomBooking.class.getResourceAsStream("ConferenceRoomBooking.xls");
 		try{
-			File excel = new File("ConferenceRoomBooking.xls");
-			fis = new FileInputStream(excel);
-			wb = new HSSFWorkbook(fis);
+			/*File excel = new File("/ConferenceRoomBooking.xls");
+			fis = new FileInputStream(excel);*/
+			InputStream stream = RoomBooking.class.getResourceAsStream("/ConferenceRoomBooking.xls");
+			wb = new HSSFWorkbook(stream);
 		}catch(Exception e){
 			e.printStackTrace();
 		}
@@ -96,9 +98,10 @@ public class RoomBooking {
 		FileInputStream fis=null;
 		
 		try{
-			File excel = new File("ConferenceRoomBooking.xls");
-			fis = new FileInputStream(excel);
-			wb = new HSSFWorkbook(fis);
+			/*File excel = new File("/ConferenceRoomBooking.xls");
+			fis = new FileInputStream(excel);*/
+			InputStream stream = RoomBooking.class.getResourceAsStream("/ConferenceRoomBooking.xls");
+			wb = new HSSFWorkbook(stream);
 			System.out.println("File Fetched");
 		}catch(Exception e)
 		{
@@ -132,8 +135,10 @@ public class RoomBooking {
 			try{
 				String st[]=cellToString(row.getCell(roomHeaderIndex)).split(":");
 				String et[]=cellToString(row.getCell(capHeaderIndex)).split(":");
-				sti=Integer.valueOf((String)st[0]);	
-				eti=Integer.valueOf((String)et[0]);
+				//sti=Integer.valueOf((String)st[0]);
+				sti=Integer.parseInt(st[0]);
+				eti=Integer.parseInt(et[0]);
+				//eti=Integer.valueOf((String)et[0]);
 				String ust[]=stime.split(":");
 				String uet[]=etime.split(":");
 				usti=Integer.valueOf((String)ust[0]);	
@@ -161,8 +166,9 @@ public class RoomBooking {
 					row1.createCell(7).setCellValue(participents);
 					row1.createCell(8).setCellValue(tea);
 					row1.createCell(9).setCellValue(p_user);
-					File excel = new File("ConferenceRoomBooking.xls");
+					File excel = new File("/ConferenceRoomBooking.xls");
 					FileOutputStream fos = new FileOutputStream(excel);
+					//OutputStream fos= RoomBooking.class.getResourceAsStream("/ConferenceRoomBooking.xls");
 					wb.write(fos);
 					result=name+" Room is Booked Successfully 1";
 					return result;
