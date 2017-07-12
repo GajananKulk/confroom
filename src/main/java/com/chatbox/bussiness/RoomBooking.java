@@ -152,7 +152,7 @@ public class RoomBooking {
 					return result=name+" Room is not available from "+sti+" to "+eti+" time slot";
 				}else if(!(i<=rowNum))
 				{
-					/fis.close();
+					fis.close();
 					//Store data
 					System.out.println(" getLastRowNum "+ws.getLastRowNum());
 					HSSFRow row1 = ws.createRow((short)  ws.getLastRowNum()+1);
