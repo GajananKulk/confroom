@@ -78,7 +78,8 @@ public class RoomBooking {
 					return result;
 				}else{
 					System.out.println("Data is Updataeing");
-					//fis.close();
+					fis.close();
+					wb.close();
 					result=roomBooking(room, date, stime, etime, bookby, purpos, projector, phone, participents, tea, p_user);
 				}
 				return result;
