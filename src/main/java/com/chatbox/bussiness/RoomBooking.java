@@ -176,7 +176,7 @@ public class RoomBooking {
 					wb.write(fos);
 					//wb.close();
 					fos.close();
-					result=name+" Room is Booked Successfully 1";
+					result=name+" Room is Booked Successfully";
 					return result;
 				}
 		}
