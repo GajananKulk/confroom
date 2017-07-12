@@ -168,7 +168,9 @@ public class RoomBooking {
 					row1.createCell(7).setCellValue(participents);
 					row1.createCell(8).setCellValue(tea);
 					row1.createCell(9).setCellValue(p_user);
-					File excel = new File("/ConferenceRoomBooking.xls");
+					ClassLoader classLoader = RoomBooking.class.getClassLoader();
+                                         File excel =  new File(classLoader.getResource("/ConferenceRoomBooking.xls").getFile());
+					//File excel = new File("/ConferenceRoomBooking.xls");
 					FileOutputStream fos = new FileOutputStream(excel);
 					//OutputStream fos= RoomBooking.class.getResourceAsStream("/ConferenceRoomBooking.xls");
 					wb.write(fos);
