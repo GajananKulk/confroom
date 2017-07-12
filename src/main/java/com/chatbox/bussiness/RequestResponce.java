@@ -67,7 +67,7 @@ public Response getConf(String outputJSON) throws IOException{
 	        res.setDisplayText(result);
 	Fulfillment f=rs.getFulfillment ();
 	Messages[] msg=f.getMessages();
-	msg.setSpeech (result);
+	       msg.setSpeech(result);
 		ObjectMapper om=new ObjectMapper();
 		String str2=om.writeValueAsString(res);
 	
