@@ -15,6 +15,8 @@ import com.chatbox.model.API_AI_Response_Mdl;
 import com.chatbox.model.Parameters;
 import com.chatbox.model.Response_Mdl;
 import com.chatbox.model.Result;
+import com.chatbox.model.Messages;
+import com.chatbox.model.Fulfillment;
 
 @Path("book")
 public class RequestResponce {
