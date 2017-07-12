@@ -69,7 +69,7 @@ public Response getConf(String outputJSON) throws IOException{
 	Messages[] msg=f.getMessages();
 	       msg[0].setSpeech(result);
 		ObjectMapper om=new ObjectMapper();
-		String str2=om.writeValueAsString(res);
+		String str2=om.writeValueAsString(msg);
 	
 	return Response.status(200).entity(str2).header("Content-Type", "application/json").build();
 }
