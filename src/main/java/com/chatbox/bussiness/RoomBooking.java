@@ -78,7 +78,7 @@ public class RoomBooking {
 					return result;
 				}else{
 					System.out.println("Data is Updataeing");
-					fis.close();
+					stream.close();
 					//wb.close();
 					result=roomBooking(room, date, stime, etime, bookby, purpos, projector, phone, participents, tea, p_user);
 				}
@@ -153,7 +153,7 @@ public class RoomBooking {
 					return result=name+" Room is not available from "+sti+" to "+eti+" time slot";
 				}else if(!(i<=rowNum))
 				{
-					fis.close();
+					stream.close();
 					//Store data
 					System.out.println(" getLastRowNum "+ws.getLastRowNum());
 					HSSFRow row1 = ws.createRow((short)  ws.getLastRowNum()+1);
