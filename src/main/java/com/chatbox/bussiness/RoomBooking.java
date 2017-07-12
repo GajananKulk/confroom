@@ -152,7 +152,7 @@ public class RoomBooking {
 					return result=name+" Room is not available from "+sti+" to "+eti+" time slot";
 				}else if(!(i<=rowNum))
 				{
-					///fis.close();
+					/fis.close();
 					//Store data
 					System.out.println(" getLastRowNum "+ws.getLastRowNum());
 					HSSFRow row1 = ws.createRow((short)  ws.getLastRowNum()+1);
@@ -170,6 +170,7 @@ public class RoomBooking {
 					FileOutputStream fos = new FileOutputStream(excel);
 					//OutputStream fos= RoomBooking.class.getResourceAsStream("/ConferenceRoomBooking.xls");
 					wb.write(fos);
+					wb.close();
 					result=name+" Room is Booked Successfully 1";
 					return result;
 				}
