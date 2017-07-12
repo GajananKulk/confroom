@@ -79,7 +79,7 @@ public class RoomBooking {
 				}else{
 					System.out.println("Data is Updataeing");
 					fis.close();
-					wb.close();
+					//wb.close();
 					result=roomBooking(room, date, stime, etime, bookby, purpos, projector, phone, participents, tea, p_user);
 				}
 				return result;
@@ -171,7 +171,7 @@ public class RoomBooking {
 					FileOutputStream fos = new FileOutputStream(excel);
 					//OutputStream fos= RoomBooking.class.getResourceAsStream("/ConferenceRoomBooking.xls");
 					wb.write(fos);
-					wb.close();
+					//wb.close();
 					result=name+" Room is Booked Successfully 1";
 					return result;
 				}
