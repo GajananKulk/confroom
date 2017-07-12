@@ -29,11 +29,12 @@ public class RoomBooking {
 		String roomname="";
 		HSSFWorkbook wb=null;
 		FileInputStream fis=null;
+		InputStream stream =null;
 		//InputStream stream = RoomBooking.class.getResourceAsStream("ConferenceRoomBooking.xls");
 		try{
 			/*File excel = new File("/ConferenceRoomBooking.xls");
 			fis = new FileInputStream(excel);*/
-			InputStream stream = RoomBooking.class.getResourceAsStream("/ConferenceRoomBooking.xls");
+			stream = RoomBooking.class.getResourceAsStream("/ConferenceRoomBooking.xls");
 			wb = new HSSFWorkbook(stream);
 		}catch(Exception e){
 			e.printStackTrace();
@@ -97,11 +98,11 @@ public class RoomBooking {
 		int i=1;
 		HSSFWorkbook wb=null;
 		FileInputStream fis=null;
-		
+		InputStream stream =null;
 		try{
 			/*File excel = new File("/ConferenceRoomBooking.xls");
 			fis = new FileInputStream(excel);*/
-			InputStream stream = RoomBooking.class.getResourceAsStream("/ConferenceRoomBooking.xls");
+			stream = RoomBooking.class.getResourceAsStream("/ConferenceRoomBooking.xls");
 			wb = new HSSFWorkbook(stream);
 			System.out.println("File Fetched");
 		}catch(Exception e)
