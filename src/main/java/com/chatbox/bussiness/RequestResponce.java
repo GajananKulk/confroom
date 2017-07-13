@@ -63,8 +63,8 @@ public Response getConf(String outputJSON) throws IOException{
         String str1 =rb.checkCapacity(room, capn, date, stime, etime, bookby, purpos, projector, phone, cap, tea, p_user);
 		Response_Mdl res=new Response_Mdl();
 		res.setSource("policyWS");
-		res.setSpeech(str1);
-	        res.setDisplayText(str1);
+		res.setSpeech("got it"+str1);
+	        res.setDisplayText("got it"+str1);
 	/*Fulfillment f=rs.getFulfillment ();
 	Messages[] msg=f.getMessages();
 	       msg[0].setSpeech(result);*/
