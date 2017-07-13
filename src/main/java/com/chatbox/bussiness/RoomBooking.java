@@ -63,7 +63,8 @@ public class RoomBooking {
 				capHeaderIndex = j;
 				System.out.println(j);
 			}
-		}    
+		}  
+		if(roomHeaderIndex <0) return "You have enter Wrong Room name. please try again";
 		
 		for (int i = 2; i <=rowNum; i++)
 		{
