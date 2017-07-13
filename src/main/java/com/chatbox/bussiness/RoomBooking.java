@@ -65,7 +65,7 @@ public class RoomBooking {
 			}
 		}    
 		
-		for (int i = 2; i <=rowNum; i++)
+		/*for (int i = 2; i <=rowNum; i++)
 		{
 			HSSFRow row = ws.getRow(i);
 			roomname =cellToString(row.getCell(roomHeaderIndex));
@@ -88,7 +88,8 @@ public class RoomBooking {
 				return result;
 			}
 
-		}
+		}*/
+		result="request is recived";
 		return result;
 	}
 	public static String roomBooking(String name,String date,String stime,String etime,String bookby,String purpos,String projector,String phone,String participents,String tea,String p_user ) throws IOException
