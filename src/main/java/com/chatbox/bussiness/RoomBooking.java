@@ -24,7 +24,7 @@ public class RoomBooking {
 
 	public static String checkCapacity(String room,int cap,String date,String stime,String etime,String bookby,String purpos,String projector,String phone,String participents,String tea,String p_user)throws IOException
 	{
-		if(true) return " GAJAMAN";
+		//if(true) return " GAJAMAN";
 		
 		int capacity=0;
 		String result="";
