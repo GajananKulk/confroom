@@ -89,7 +89,7 @@ public class RoomBooking {
 			}
 
 		}
-		result="request is recived";
+		result="Room Booking is failed. please try again";
 		return result;
 	}
 	public static String roomBooking(String name,String date,String stime,String etime,String bookby,String purpos,String projector,String phone,String participents,String tea,String p_user ) throws IOException
