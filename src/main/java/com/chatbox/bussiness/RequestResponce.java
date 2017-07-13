@@ -60,11 +60,11 @@ public Response getConf(String outputJSON) throws IOException{
         String tea=p.getTea();
         String p_user=p.getPrimaryuser();
 	RoomBooking rb=new RoomBooking();
-        String result =rb.checkCapacity(room, capn, date, stime, etime, bookby, purpos, projector, phone, cap, tea, p_user);
+        String str1 =rb.checkCapacity(room, capn, date, stime, etime, bookby, purpos, projector, phone, cap, tea, p_user);
 		Response_Mdl res=new Response_Mdl();
 		res.setSource("policyWS");
-		res.setSpeech(result);
-	        res.setDisplayText(result);
+		res.setSpeech(str1);
+	        res.setDisplayText(str1);
 	/*Fulfillment f=rs.getFulfillment ();
 	Messages[] msg=f.getMessages();
 	       msg[0].setSpeech(result);*/
